@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="w-screen h-screen bg-backgroundImg bg-cover bg-center backdrop-blur-sm">
+            <div class="flex flex-col justify-end content-end w-screen h-screen pb-52 pl-24 absolute">
+                <button id="modal-btn" class="text-white border-2 rounded-lg p-2 max-w-fit text-7xl hover:bg-blue-500 transition ease-in-out delay-150">Modal</button>
+            </div>
+                <div id="modal-container" class="h-screen flex items-center justify-center hidden">
+                    <div id="modal" class="text-black bg-white text-xl flex flex-row gap-2 items-center p-5 rounded-lg absolute">
+                        <p class="text-3xl">This is a modal!</p>
+                        <div id="close-btn" class="cursor-pointer text-rose-600 text-5xl">&times;</div>
+                    </div>
+                </div>
+            </div>    
+    <script src="app.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                backgroundImage: {
+                    'backgroundImg': "url('backgroundImg.jpeg')",
+                },
+                transitionDuration: {
+                    '4': '4ms',
+                },
+                colors: {
+                    clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
